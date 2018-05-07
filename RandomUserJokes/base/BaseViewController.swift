@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class BaseViewController: UIViewController {
     
+    var dataSource : [BaseData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,9 @@ class BaseViewController: UIViewController {
         Alamofire.request(fullURL!).responseJSON(completionHandler: { response in
             if (response.result.value != nil) {
                 let json = JSON(response.result.value!).array
-                print("\(String(describing: json))")
+                for item in json! {
+                    self.dataSource.append(BaseData(data: item))
+                }
             }
         })
     }
