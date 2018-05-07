@@ -48,7 +48,7 @@ class LoginViewController: BaseViewController {
     @IBAction func login(_ sender: UIButton) {
         
         self.fetchJokesUsing(fistName: fistNameField.text ?? "", lastName: lastNameField.text ?? "")
-        
+        self.openController(storyboard: "Home", controller: "Home")
         
     }
     

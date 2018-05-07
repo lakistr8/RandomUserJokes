@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, BaseViewControllerProtocol {
     
     var dataSource : [BaseData] = []
     
@@ -35,5 +35,13 @@ class BaseViewController: UIViewController {
         })
     }
     
+    
+    func openController(storyboard:String, controller: String) {
+        let str = UIStoryboard(name: "\(storyboard)Storyboard", bundle: nil)
+        guard let vc = str.instantiateViewController(withIdentifier: "\(controller)ViewController") as? BaseViewController else {
+            fatalError("falied to create \(controller) view controller")
+        }
+        self.show(vc, sender: self)
+    }
 
 }
