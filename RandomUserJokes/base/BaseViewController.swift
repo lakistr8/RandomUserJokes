@@ -13,7 +13,8 @@ import SwiftyJSON
 class BaseViewController: UIViewController, BaseViewControllerProtocol {
     
     var dataSource : [BaseData] = []
-    
+    @IBOutlet weak var closeBtn: UIButton!
+    let nib = UINib(nibName: "JokesComponent", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! JokesComponent
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,13 +37,18 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     }
     
     func initializeJokesView(data: [BaseData]) {
-        let nib = UINib(nibName: "JokesComponent", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! JokesComponent
+        self.closeBtn.isHidden = false
         nib.initSelf(data: data)
         nib.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
         self.view.addSubview(nib)
+        self.view.bringSubview(toFront: closeBtn)
     }
     
     func close() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func close(_ sender: UIButton!) {
+        self.nib.removeFromSuperview()
     }
 }
