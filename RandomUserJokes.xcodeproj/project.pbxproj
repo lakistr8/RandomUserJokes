@@ -14,11 +14,12 @@
 		38C096FA20A0334A00922D19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C096F920A0334A00922D19 /* BaseViewController.swift */; };
 		38C096FC20A0343A00922D19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C096FB20A0343A00922D19 /* LoginViewController.swift */; };
 		38C0970020A035FE00922D19 /* BaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C096FF20A035FE00922D19 /* BaseData.swift */; };
-		38C0970220A03DB000922D19 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C0970120A03DB000922D19 /* HomeStoryboard.storyboard */; };
-		38C0970520A03E6300922D19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0970420A03E6300922D19 /* HomeViewController.swift */; };
 		38C0970720A03E7800922D19 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0970620A03E7800922D19 /* BaseViewControllerProtocol.swift */; };
-		38C0970920A0421500922D19 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0970820A0421500922D19 /* HomeCell.swift */; };
+		38C0970920A0421500922D19 /* JokesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0970820A0421500922D19 /* JokesCell.swift */; };
 		38C0970B20A0436500922D19 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0970A20A0436500922D19 /* GridLayout.swift */; };
+		38C0970D20A0485D00922D19 /* JokesComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C0970C20A0485D00922D19 /* JokesComponent.xib */; };
+		38C0970F20A0490F00922D19 /* JokesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0970E20A0490F00922D19 /* JokesComponent.swift */; };
+		38C0971220A0494100922D19 /* JokesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C0971120A0494100922D19 /* JokesCell.xib */; };
 		8DFC9E4B964936ED816B255F /* Pods_RandomUserJokes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95244FE3F7522AB219D63248 /* Pods_RandomUserJokes.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,11 +34,12 @@
 		38C096F920A0334A00922D19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		38C096FB20A0343A00922D19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38C096FF20A035FE00922D19 /* BaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseData.swift; sourceTree = "<group>"; };
-		38C0970120A03DB000922D19 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
-		38C0970420A03E6300922D19 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		38C0970620A03E7800922D19 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
-		38C0970820A0421500922D19 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		38C0970820A0421500922D19 /* JokesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesCell.swift; sourceTree = "<group>"; };
 		38C0970A20A0436500922D19 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		38C0970C20A0485D00922D19 /* JokesComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokesComponent.xib; sourceTree = "<group>"; };
+		38C0970E20A0490F00922D19 /* JokesComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesComponent.swift; sourceTree = "<group>"; };
+		38C0971120A0494100922D19 /* JokesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokesCell.xib; sourceTree = "<group>"; };
 		95244FE3F7522AB219D63248 /* Pods_RandomUserJokes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomUserJokes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9B1CF97B03E0500DA83E5A /* Pods-RandomUserJokes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomUserJokes.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomUserJokes/Pods-RandomUserJokes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +80,6 @@
 				38C096E520A0316E00922D19 /* AppDelegate.swift */,
 				38C096FE20A035F200922D19 /* base */,
 				38C096FD20A035EA00922D19 /* login */,
-				38C0970320A03E4F00922D19 /* home */,
 				38C096EE20A0317000922D19 /* LaunchScreen.storyboard */,
 				38C096EC20A0317000922D19 /* Assets.xcassets */,
 				38C096F120A0317000922D19 /* Info.plist */,
@@ -101,19 +102,21 @@
 				38C096F920A0334A00922D19 /* BaseViewController.swift */,
 				38C0970620A03E7800922D19 /* BaseViewControllerProtocol.swift */,
 				38C096FF20A035FE00922D19 /* BaseData.swift */,
+				38C0971020A0492E00922D19 /* component */,
 			);
 			path = base;
 			sourceTree = "<group>";
 		};
-		38C0970320A03E4F00922D19 /* home */ = {
+		38C0971020A0492E00922D19 /* component */ = {
 			isa = PBXGroup;
 			children = (
-				38C0970120A03DB000922D19 /* HomeStoryboard.storyboard */,
-				38C0970420A03E6300922D19 /* HomeViewController.swift */,
-				38C0970820A0421500922D19 /* HomeCell.swift */,
+				38C0970C20A0485D00922D19 /* JokesComponent.xib */,
+				38C0970E20A0490F00922D19 /* JokesComponent.swift */,
+				38C0971120A0494100922D19 /* JokesCell.xib */,
+				38C0970820A0421500922D19 /* JokesCell.swift */,
 				38C0970A20A0436500922D19 /* GridLayout.swift */,
 			);
-			path = home;
+			path = component;
 			sourceTree = "<group>";
 		};
 		62DEC749C6558E8E1121FA60 /* Frameworks */ = {
@@ -195,8 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C096F820A0332800922D19 /* LoginStoryboard.storyboard in Resources */,
+				38C0970D20A0485D00922D19 /* JokesComponent.xib in Resources */,
+				38C0971220A0494100922D19 /* JokesCell.xib in Resources */,
 				38C096F020A0317000922D19 /* LaunchScreen.storyboard in Resources */,
-				38C0970220A03DB000922D19 /* HomeStoryboard.storyboard in Resources */,
 				38C096ED20A0317000922D19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,8 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C0970520A03E6300922D19 /* HomeViewController.swift in Sources */,
-				38C0970920A0421500922D19 /* HomeCell.swift in Sources */,
+				38C0970920A0421500922D19 /* JokesCell.swift in Sources */,
+				38C0970F20A0490F00922D19 /* JokesComponent.swift in Sources */,
 				38C096FC20A0343A00922D19 /* LoginViewController.swift in Sources */,
 				38C096E620A0316E00922D19 /* AppDelegate.swift in Sources */,
 				38C0970020A035FE00922D19 /* BaseData.swift in Sources */,

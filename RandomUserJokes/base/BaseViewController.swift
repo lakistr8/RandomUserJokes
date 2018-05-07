@@ -30,18 +30,16 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
                 for item in obj! {
                     self.dataSource.append(BaseData(data: item))
                 }
-                
+                self.initializeJokesView(data: self.dataSource)
             }
         })
     }
     
-    
-    func openController(storyboard:String, controller: String) {
-        let str = UIStoryboard(name: "\(storyboard)Storyboard", bundle: nil)
-        guard let vc = str.instantiateViewController(withIdentifier: "\(controller)ViewController") as? BaseViewController else {
-            fatalError("falied to create \(controller) view controller")
-        }
-        self.show(vc, sender: self)
+    func initializeJokesView(data: [BaseData]) {
+        let nib = UINib(nibName: "JokesComponent", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! JokesComponent
+        nib.initSelf(data: data)
+        nib.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        self.view.addSubview(nib)
     }
     
     func close() {

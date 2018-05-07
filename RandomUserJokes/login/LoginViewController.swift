@@ -12,7 +12,7 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var fistNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
-    
+    @IBOutlet weak var closeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +48,8 @@ class LoginViewController: BaseViewController {
     @IBAction func login(_ sender: UIButton) {
         
         self.fetchJokesUsing(fistName: fistNameField.text ?? "", lastName: lastNameField.text ?? "")
-        
-        self.openController(storyboard: "Home", controller: "Home")
-        
+        self.closeBtn.isHidden = false
+        self.view.bringSubview(toFront: closeBtn)
     }
     
 

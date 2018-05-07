@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeCell: UICollectionViewCell {
+class JokesCell: UICollectionViewCell {
     
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbl: UILabel!

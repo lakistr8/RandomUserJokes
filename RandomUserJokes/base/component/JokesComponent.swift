@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  JokesComponent.swift
 //  RandomUserJokes
 //
 //  Created by Lazar Andonov on 5/7/18.
@@ -8,24 +8,36 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class JokesComponent: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var img: UIImageView!
+    var data: [BaseData] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.register(UINib(nibName: "JokesCell", bundle: nil), forCellWithReuseIdentifier: "JokesCell")
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = img.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        img.addSubview(blurEffectView)
     }
-
+    
+    func initSelf(data: [BaseData]) {
+        self.data = data
+        self.collectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 200
+        return self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JokesCell", for: indexPath) as! JokesCell
         
-//        cell.fillCell(data: [self.dataSource[indexPath.row]])
+        cell.fillCell(data: [self.data[indexPath.row]])
         
         return cell
     }
@@ -46,6 +58,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     
     
     @IBAction func close(_ sender: UIButton!) {
-        self.close()
+        self.removeFromSuperview()
     }
+
 }

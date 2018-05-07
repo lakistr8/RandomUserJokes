@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JokesComponent" customModule="RandomUserJokes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="5gG-ga-oHF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QNX-kR-h3I">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewLayout key="collectionViewLayout" id="I3D-oz-ZKm" customClass="GridLayout" customModule="RandomUserJokes" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="GqD-fg-fl6"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="27j-Ap-mxY"/>
+                        <outlet property="prefetchDataSource" destination="iN0-l3-epB" id="r0N-kn-JpN"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5gG-ga-oHF" secondAttribute="bottom" id="0df-hG-Xee"/>
+                <constraint firstItem="QNX-kR-h3I" firstAttribute="top" secondItem="5gG-ga-oHF" secondAttribute="top" id="Lqc-tH-7sU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5gG-ga-oHF" secondAttribute="trailing" id="VJ9-MB-OYy"/>
+                <constraint firstItem="QNX-kR-h3I" firstAttribute="bottom" secondItem="5gG-ga-oHF" secondAttribute="bottom" id="s3X-O2-re5"/>
+                <constraint firstItem="5gG-ga-oHF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tph-EG-d83"/>
+                <constraint firstItem="QNX-kR-h3I" firstAttribute="trailing" secondItem="5gG-ga-oHF" secondAttribute="trailing" id="upC-am-yAu"/>
+                <constraint firstItem="QNX-kR-h3I" firstAttribute="leading" secondItem="5gG-ga-oHF" secondAttribute="leading" id="w05-77-hAK"/>
+                <constraint firstItem="5gG-ga-oHF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xx5-S6-2c7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="QNX-kR-h3I" id="kX2-GD-OLP"/>
+                <outlet property="img" destination="5gG-ga-oHF" id="SBd-gu-vKL"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="home" width="640" height="1136"/>
+    </resources>
+</document>
