@@ -10,4 +10,5 @@ import Foundation
 
 protocol BaseViewControllerProtocol {
     func openController(storyboard:String, controller: String)
+    func close()
 }

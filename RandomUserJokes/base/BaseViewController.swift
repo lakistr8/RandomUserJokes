@@ -43,5 +43,8 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
         }
         self.show(vc, sender: self)
     }
-
+    
+    func close() {
+        dismiss(animated: true, completion: nil)
+    }
 }
