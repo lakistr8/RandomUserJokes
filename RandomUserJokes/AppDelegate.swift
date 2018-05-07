@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? UIViewController else {
             fatalError("Failed to create instance of Login view controller")
         }
         
-        window.rootViewController = vc
+        window?.rootViewController = vc
         
         return true
     }

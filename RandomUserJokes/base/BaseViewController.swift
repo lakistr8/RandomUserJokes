@@ -25,10 +25,12 @@ class BaseViewController: UIViewController {
         let fullURL = URL(string: "http://api.icndb.com/jokes/random/10?firstName=\(fistName)&lastName=\(lastName)")
         Alamofire.request(fullURL!).responseJSON(completionHandler: { response in
             if (response.result.value != nil) {
-                let json = JSON(response.result.value!).array
-                for item in json! {
+                let json = JSON(response.result.value!)
+                let obj = json["value"].array
+                for item in obj! {
                     self.dataSource.append(BaseData(data: item))
                 }
+                
             }
         })
     }
